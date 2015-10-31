@@ -21,12 +21,10 @@ Package.onUse(function(api) {
 
   api.use(['cosmos:browserify@0.8.1']);
   api.addFiles('client.browserify.js');
-  api.export(['ReactBootstrap']);
+  api.export(['RBS']);
 });
 
 Package.onTest(function(api) {
   api.use('ecmascript');
-  api.use('tinytest');
-  api.use('cosmos:browserify-example');
-  api.addFiles('browserify-example-tests.js');
+  api.use('tinytest')
 });

@@ -37,7 +37,7 @@ App = React.createClass({
       <div className="container">
         <header>
           <h1>Todo List</h1>
-          <ReactBootstrap.Button bsStyle="primary">Default</ReactBootstrap.Button>
+          <RBS.Button bsStyle="primary">Default</RBS.Button>
 
           <form className="new-task" onSubmit={this.handleSubmit} >
             <input
