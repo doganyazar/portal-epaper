@@ -21,7 +21,7 @@ App = React.createClass({
     event.preventDefault();
 
     // Find the text field via the React ref
-    var text = React.findDOMNode(this.refs.textInput).value.trim();
+    var text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
 
     Tasks.insert({
       text: text,
@@ -29,7 +29,7 @@ App = React.createClass({
     });
 
     // Clear form
-    React.findDOMNode(this.refs.textInput).value = "";
+    ReactDOM.findDOMNode(this.refs.textInput).value = "";
   },
 
   render() {
@@ -37,7 +37,6 @@ App = React.createClass({
       <div className="container">
         <header>
           <h1>Todo List</h1>
-          <RBS.Button bsStyle="primary">Default</RBS.Button>
 
           <form className="new-task" onSubmit={this.handleSubmit} >
             <input
